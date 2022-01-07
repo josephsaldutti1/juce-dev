@@ -1,2 +1,4 @@
 # Ignore cmake build results
 **/cmake-build*
+*/Builds/*
+*/JuceLibraryCode/*
