@@ -60,3 +60,6 @@ building this project
 VST3 SDK
 
 The VST3 SDK comes with JUCE but is not supported with MinGW: https://forum.juce.com/t/cmake-you-need-to-enable-at-least-one-plugin-format/45956/8
+
+********************************
+Needed to use Visual Studio 2022 and the Projucer to create this project. Only the source code is included here
