@@ -31,7 +31,7 @@ SimpleGainAudioProcessor::~SimpleGainAudioProcessor()
 //==============================================================================
 const juce::String SimpleGainAudioProcessor::getName() const
 {
-    return JucePlugin_Name;
+    return "SimpleGain";
 }
 
 bool SimpleGainAudioProcessor::acceptsMidi() const
