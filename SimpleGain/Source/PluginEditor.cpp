@@ -10,7 +10,7 @@
 #include "PluginEditor.h"
 
 //==============================================================================
-SimpleGainAudioProcessorEditor::SimpleGainAudioProcessorEditor (SimpleGainAudioProcessor& p, AudioProcessorValueTreeState& vts)
+SimpleGainAudioProcessorEditor::SimpleGainAudioProcessorEditor (SimpleGainAudioProcessor& p, juce::AudioProcessorValueTreeState& vts)
     : AudioProcessorEditor (&p), audioProcessor (p), valueTreeState(vts)
 {
     // Make sure that before the constructor has finished, you've set the
@@ -18,11 +18,11 @@ SimpleGainAudioProcessorEditor::SimpleGainAudioProcessorEditor (SimpleGainAudioP
     setSize(400, 300);
 
     // Gain Slider and Label settings
-    gainSlider.setSliderStyle(Slider::SliderStyle::RotaryVerticalDrag);
-    gainSlider.setTextBoxStyle(Slider::TextBoxBelow, true, 80, 20);
+    gainSlider.setSliderStyle(juce::Slider::SliderStyle::RotaryVerticalDrag);
+    gainSlider.setTextBoxStyle(juce::Slider::TextBoxBelow, true, 80, 20);
     gainSlider.setTextValueSuffix(" dB");
-    gainLabel.setText("Gain In", dontSendNotification);
-    gainLabel.setJustificationType(Justification::centred);
+    gainLabel.setText("Gain In", juce::dontSendNotification);
+    gainLabel.setJustificationType(juce::Justification::centred);
 
     // Add and make visible
     addAndMakeVisible(gainSlider);
@@ -40,8 +40,8 @@ SimpleGainAudioProcessorEditor::~SimpleGainAudioProcessorEditor()
 void SimpleGainAudioProcessorEditor::paint (juce::Graphics& g)
 {
     // (Our component is opaque, so we must completely fill the background with a solid colour)
-    g.fillAll(Colour::Colour(0xff4287f5));
-    g.setColour(Colours::white);
+    g.fillAll(juce::Colour::Colour(0xff4287f5));
+    g.setColour(juce::Colours::white);
     g.setFont(18.0f);
 }
 

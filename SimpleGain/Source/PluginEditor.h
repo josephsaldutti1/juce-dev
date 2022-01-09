@@ -18,10 +18,10 @@ class SimpleGainAudioProcessorEditor  : public juce::AudioProcessorEditor
 {
 
     // Typedefs
-    typedef AudioProcessorValueTreeState::SliderAttachment SliderAttachment;
+    typedef juce::AudioProcessorValueTreeState::SliderAttachment SliderAttachment;
 
 public:
-    SimpleGainAudioProcessorEditor (SimpleGainAudioProcessor&, AudioProcessorValueTreeState&);
+    SimpleGainAudioProcessorEditor (SimpleGainAudioProcessor&, juce::AudioProcessorValueTreeState&);
     ~SimpleGainAudioProcessorEditor() override;
 
     //==============================================================================
@@ -34,11 +34,11 @@ private:
     SimpleGainAudioProcessor& audioProcessor;
 
     // Value Tree
-    AudioProcessorValueTreeState& valueTreeState;
+    juce::AudioProcessorValueTreeState& valueTreeState;
 
     // Slider, Label, and Attachment for Gain
-    Slider gainSlider;
-    Label gainLabel;
+    juce::Slider gainSlider;
+    juce::Label gainLabel;
     std::unique_ptr<SliderAttachment> gainSliderAttachment;
 
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (SimpleGainAudioProcessorEditor)

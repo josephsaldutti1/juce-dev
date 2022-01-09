@@ -21,6 +21,7 @@ SimpleGainAudioProcessor::SimpleGainAudioProcessor()
                      #endif
                        )
 #endif
+, parameters(*this, nullptr)
 {
 }
 
@@ -166,7 +167,7 @@ bool SimpleGainAudioProcessor::hasEditor() const
 
 juce::AudioProcessorEditor* SimpleGainAudioProcessor::createEditor()
 {
-    return new SimpleGainAudioProcessorEditor (*this);
+    return new SimpleGainAudioProcessorEditor(*this, parameters);
 }
 
 //==============================================================================

@@ -56,4 +56,7 @@ public:
 private:
     //==============================================================================
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (SimpleGainAudioProcessor)
+
+    // Parameter Value Tree
+    juce::AudioProcessorValueTreeState parameters;
 };
